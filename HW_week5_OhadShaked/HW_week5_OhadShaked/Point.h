@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+
+#define ZERO 0
 
 class Point
 {
@@ -13,7 +16,7 @@ public:
 	Point(double x, double y);
 
 	// Destructor
-	virtual ~Point();
+	~Point();
 	
 	// Operators
 	Point operator+(const Point& other) const;

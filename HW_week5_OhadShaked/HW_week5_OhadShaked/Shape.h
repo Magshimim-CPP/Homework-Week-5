@@ -1,8 +1,11 @@
 #pragma once
 #include "Point.h"
 #include "Canvas.h"
+#include <iostream>
 #include <string>
 
+using std::cout;
+using std::endl;
 using std::string;
 
 class Shape 
@@ -13,11 +16,11 @@ public:
 	Shape(const string& name, const string& type);
 
 	// Destructor
-	virtual ~Shape() = 0;
+	virtual ~Shape();
 
 	// Getters
-	string getType();
-	string getName();
+	string getType() const;
+	string getName() const;
 
 	// Methods
 	virtual double getArea() const = 0;

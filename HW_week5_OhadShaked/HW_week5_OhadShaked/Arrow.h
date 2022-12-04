@@ -1,6 +1,8 @@
 #pragma once
 #include "Shape.h"
 
+#define SAME_POINT_ERROR "ERROR: 2 of the same points recived."
+
 class Arrow : public Shape
 {
 private:
@@ -16,6 +18,8 @@ public:
 	~Arrow();
 
 	// Getters
+	virtual double getArea() const;
+	virtual double getPerimeter() const;
 	Point getSource() const;
 	Point getDestination() const;
 

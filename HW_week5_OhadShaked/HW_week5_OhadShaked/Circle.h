@@ -3,6 +3,7 @@
 #include "Shape.h"
 #include "Point.h"
 
+#define NEGATIVE_RADIUS_ERROR "ERROR: Recived radius with a negative value."
 #define PI 3.14
 
 class Circle : public Shape

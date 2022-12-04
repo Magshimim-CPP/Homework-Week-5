@@ -3,30 +3,32 @@
 #include "Canvas.h"
 #include <string>
 
+using std::string;
+
 class Shape 
 {
 public:
 
 	// Constructor
-	Shape(std::string name, std::string type);
+	Shape(const string& name, const string& type);
 
 	// Destructor
-	~Shape();
+	virtual ~Shape() = 0;
 
 	// Getters
-	std::string getType();
-	std::string getName();
+	string getType();
+	string getName();
 
 	// Methods
-	double getArea();
-	double getPerimeter();
-	void move(Point other); // add the Point to all the points of shape
-	void printDetails() ;
+	virtual double getArea() const = 0;
+	virtual double getPerimeter() const = 0;
+	virtual void move(const Point& other) = 0; // add the Point to all the points of shape
+	void printDetails() const;
 
 	virtual void draw(const Canvas& canvas) = 0;
 	virtual void clearDraw(const Canvas& canvas) = 0;
 
 private:
-	std::string _name;
-	std::string _type;
+	string _name;
+	string _type;
 };

@@ -3,25 +3,26 @@
 
 class Arrow : public Shape
 {
+private:
+	Point _source;
+	Point _destination;
+
 public:
 
 	// Constructor
-	Arrow(Point a, Point b, std::string type, std::string name);
+	Arrow(const Point& a, const Point& b, const string& type, const string& name);
 
 	// Destructor
 	~Arrow();
 
 	// Getters
-	Point getSource();
-	Point getDestination();
+	Point getSource() const;
+	Point getDestination() const;
 
 	// Methods
-	void draw(const Canvas& canvas) override;
-	void clearDraw(const Canvas& canvas) override;
+	virtual void move(const Point& other) override;
+	virtual void draw(const Canvas& canvas) override;
+	virtual void clearDraw(const Canvas& canvas) override;
 
 	// override functions if need (virtual + pure virtual)
-
-private:
-	Point _source;
-	Point _destination;
 };

@@ -2,6 +2,10 @@
 
 class Point
 {
+protected:
+	double _x;
+	double _y;
+
 public:
 
 	// Constructors
@@ -9,7 +13,7 @@ public:
 	Point(double x, double y);
 
 	// Destructor
-	~Point();
+	virtual ~Point();
 	
 	// Operators
 	Point operator+(const Point& other) const;
@@ -20,5 +24,5 @@ public:
 	double getY() const;
 
 	// Methods
-	double distance(Point& other);
+	double distance(const Point& other) const;
 };

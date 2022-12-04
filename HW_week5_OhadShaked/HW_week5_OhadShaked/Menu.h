@@ -1,7 +1,10 @@
 #pragma once
 #include "Shape.h"
+#include "Rectangle.h"
 #include "Canvas.h"
 #include <vector>
+
+using myShapes::Rectangle;
 
 class Menu
 {

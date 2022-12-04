@@ -7,21 +7,29 @@
 
 class Circle : public Shape
 {
+protected:
+	Point _center;
+	double _radius;
+
 public:
 
 	// Constructor
-	Circle(Point center, double radius, std::string type, std::string name);
+	Circle(const Point& center, double radius, const string& type, const string& name);
 
 	// Destructor
 	~Circle();
 
 	// Getters
-	Point getCenter();
-	double getRadius();
+	virtual Point getCenter() const;
+	virtual double getRadius() const;
+	virtual double getArea() const;
+	virtual double getPerimeter() const;
+
 
 	// Methods
-	void draw(const Canvas& canvas) override;
-	void clearDraw(const Canvas& canvas) override;
+	virtual void draw(const Canvas& canvas) override;
+	virtual void clearDraw(const Canvas& canvas) override;
+	virtual void move(const Point& other);
 
 	// add fields
 	// override functions if need (virtual + pure virtual)

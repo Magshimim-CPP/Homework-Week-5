@@ -8,14 +8,17 @@ class Polygon : public Shape
 public:
 
 	// Constructor
-	Polygon(std::string type, std::string name);
+	Polygon(const string& type, const string& name);
 
 	// Destructor
-	~Polygon();
+	virtual ~Polygon();
 
 	// Methods
+	virtual void move(const Point& other) override;
 
 	// Getters
+	virtual double getArea() const override;
+	virtual double getPerimeter() const override;
 	std::vector<Point> getPoints();
 
 	// override functions if need (virtual + pure virtual)

@@ -11,14 +11,15 @@ namespace myShapes
 
 		// Constructor
 		// There's a need only for the top left corner 
-		Rectangle(Point a, double length, double width, std::string type, std::string name);
+		Rectangle(const Point& a, double length, double width, const string& type, const string& name);
 
 		// Destructor
-		~Rectangle();
+		virtual ~Rectangle();
 
 		// Methods
-		void draw(const Canvas& canvas) override;
-		void clearDraw(const Canvas& canvas) override;
+		virtual double getArea() const override;
+		virtual void draw(const Canvas& canvas) override;
+		virtual void clearDraw(const Canvas& canvas) override;
 
 		// override functions if need (virtual + pure virtual)
 

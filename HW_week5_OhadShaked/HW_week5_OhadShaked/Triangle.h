@@ -1,6 +1,8 @@
 #include "Polygon.h"
 #include <string>
 
+#define SAME_LINE_ERROR "ERROR: all of the recived points are located on the same line, and dose not create a triangle."
+
 class Triangle : public Polygon
 {
 public:

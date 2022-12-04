@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Shape.h"
+#include "Point.h"
 #include <vector>
 
 class Polygon : public Shape
@@ -17,9 +18,8 @@ public:
 	virtual void move(const Point& other) override;
 
 	// Getters
-	virtual double getArea() const override;
 	virtual double getPerimeter() const override;
-	std::vector<Point> getPoints();
+	std::vector<Point> getPoints() const;
 
 	// override functions if need (virtual + pure virtual)
 

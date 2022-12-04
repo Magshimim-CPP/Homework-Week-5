@@ -4,9 +4,14 @@
 
 namespace myShapes
 {
+
 	// Calling it MyRectangle becuase Rectangle is taken by global namespace.
 	class Rectangle : public Polygon
 	{
+	private:
+		double _width;
+		double _length;
+
 	public:
 
 		// Constructor
@@ -21,8 +26,5 @@ namespace myShapes
 		virtual void draw(const Canvas& canvas) override;
 		virtual void clearDraw(const Canvas& canvas) override;
 
-		// override functions if need (virtual + pure virtual)
-
-		// Add Fields if necessary
 	};
 }

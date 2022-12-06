@@ -1,7 +1,7 @@
 #include "Polygon.h"
 #include <string>
 
-#define SAME_LINE_ERROR "ERROR: all of the recived points are located on the same line, and dose not create a triangle."
+#define SAME_LINE_ERROR "ERROR: all of the recived points are located on the same line, and dose not create a triangle." //defined string for error message
 
 class Triangle : public Polygon
 {
@@ -17,7 +17,5 @@ public:
 	virtual double getArea() const override;
 	virtual void draw(const Canvas& canvas) override;
 	virtual void clearDraw(const Canvas& canvas) override;
-
-	// override functions if need (virtual + pure virtual)
 
 };

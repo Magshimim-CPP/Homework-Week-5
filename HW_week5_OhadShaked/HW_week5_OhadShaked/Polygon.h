@@ -21,8 +21,6 @@ public:
 	virtual double getPerimeter() const override;
 	std::vector<Point> getPoints() const;
 
-	// override functions if need (virtual + pure virtual)
-
 protected:
 	std::vector<Point> _points;
 };

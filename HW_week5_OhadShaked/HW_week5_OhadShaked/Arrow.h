@@ -1,7 +1,7 @@
 #pragma once
 #include "Shape.h"
 
-#define SAME_POINT_ERROR "ERROR: 2 of the same points recived."
+#define SAME_POINT_ERROR "ERROR: 2 of the same points recived." //defined string for error message
 
 class Arrow : public Shape
 {
@@ -27,6 +27,4 @@ public:
 	virtual void move(const Point& other) override;
 	virtual void draw(const Canvas& canvas) override;
 	virtual void clearDraw(const Canvas& canvas) override;
-
-	// override functions if need (virtual + pure virtual)
 };

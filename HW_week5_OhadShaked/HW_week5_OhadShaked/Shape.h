@@ -1,9 +1,15 @@
 #pragma once
+//Using iostream, string, and the point & canvas header files.
 #include "Point.h"
 #include "Canvas.h"
 #include <iostream>
 #include <string>
 
+//Defining red color for error messages.
+#define RED "\033[1;31m" 
+#define RESET_COLOR "\033[0m"
+
+//Using specific functions from the std namespace.
 using std::cout;
 using std::endl;
 using std::string;

@@ -1,9 +1,8 @@
 #pragma once
-
 #include "Shape.h"
 #include "Point.h"
 
-#define NEGATIVE_RADIUS_ERROR "ERROR: Recived radius with a negative value."
+#define NEGATIVE_RADIUS_ERROR "ERROR: Recived radius with a negative value." //defined string error message
 #define PI 3.14
 
 class Circle : public Shape
@@ -31,8 +30,5 @@ public:
 	virtual void draw(const Canvas& canvas) override;
 	virtual void clearDraw(const Canvas& canvas) override;
 	virtual void move(const Point& other);
-
-	// add fields
-	// override functions if need (virtual + pure virtual)
 
 };
